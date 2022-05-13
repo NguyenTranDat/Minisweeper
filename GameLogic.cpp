@@ -21,7 +21,7 @@ void Game::gameLogic() {
 	}
 	if (this->clickBoom) {
 		this->renderImg("img/face_lost.png", { (int)(this->video.width / 2 - IMG_WIDTH / 2), 0 });
-		if (this->hightScore) return;
+		if (this->hightScore || this->setting) return;
 		this->renderBoom();
 		*this->endGame = true;
 	}

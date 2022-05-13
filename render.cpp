@@ -11,7 +11,7 @@ void Game::renderGame() {
 void Game::renderBoom() {
 	for (int i = 0; i < this->getRow(); i++) {
 		for (int j = 0; j < this->getCol(); j++) {
-			if (!this->array[i][j].flag) continue;
+			if (!*this->array[i][j].boom) continue;
 			this->array[i][j].path = "img/" + this->array[i][j].numberPath;
 			this->renderImg(this->array[i][j].getPath(), this->array[i][j].pos);
 		}

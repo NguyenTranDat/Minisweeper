@@ -68,13 +68,11 @@ void Game::mouseButton(Point _pos,const bool mouseButtonLeft) {
 	}
 
 	if (IMG_WIDTH <= x && x <= IMG_WIDTH * 2 && 0 <= y && y < IMG_HEIGHT) {
-		std::cout << "hight score\n";
 		this->hightScore = !this->hightScore;
 		this->setting = false;
 	}
 
 	if (0 <= x && x <= IMG_WIDTH && 0 <= y && y <= IMG_HEIGHT) {
-		std::cout << "setting\n";
 		this->setting = !this->setting;
 		this->hightScore = false;
 	}

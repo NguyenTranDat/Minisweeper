@@ -19,6 +19,7 @@ std::string convert(int number) {
 		s = convertIntToString(number % 10) + s;
 		number /= 10;
 	}
+	if (s == "") return "0";
 	return s;
 }
 

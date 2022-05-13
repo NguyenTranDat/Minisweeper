@@ -33,11 +33,25 @@ void Game::initWindow() {
 
 void Game::setupBoom() {
 	srand(time(NULL));
-	for (int i = 0; i < this->getBoom();) {
+	int k = 0;
+	for(int l = 0; l<this->getBoom() / ((this->getRow()/4)*(this->getCol()/4)); l++)
+	for (int i = 0; i < this->getRow()/4; i ++) {
+		for (int j = 0; j < this->getCol()/4;) {
+			int x = i * 4 + rand() % 4;
+			int y = j * 4 + rand() % 4;
+			if (x >= this->getRow() || y >= this->getCol() || *this->array[x][y].boom) continue;
+			k++;
+			j++;
+			*this->array[x][y].boom = true;
+			this->array[x][y].numberPath = "boom.png";
+		}
+	}
+
+	for (; k < this->getBoom();) {
 		int x = rand() % this->getRow();
 		int y = rand() % this->getCol();
 		if (*this->array[x][y].boom) continue;
-		i++;
+		k++;
 		*this->array[x][y].boom = true;
 		this->array[x][y].numberPath = "boom.png";
 	}

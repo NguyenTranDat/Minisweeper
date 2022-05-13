@@ -30,10 +30,8 @@ void Game::clickHightScore() {
 	this->inputFile(this->levelGame);
 	
 	std::string s;
-	int i = 0;
-	while(this->input) {
+	for (int i = 1; i < 6; i++) {
 		this->input >> s;
-		i++;
 		this->renderText(convertIntToString(i) + ". " + s, {10, IMG_HEIGHT * i});
 	}
 
@@ -48,7 +46,7 @@ void Game::resetScore(int _x) {
 	}
 	for (int i = 0; i < 5; i++) {
 		if (a[i] == 0 || a[i] > _x) {
-			for (int j = i + 1; j < 5; j++) a[j] = a[j - 1];
+			for (int j = 4; j >= i+1; j--) a[j] = a[j - 1];
 			a[i] = _x;
 			break;
 		}
