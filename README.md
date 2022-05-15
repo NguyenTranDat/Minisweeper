@@ -9,5 +9,4 @@
 4. nhận xét & tự nhận điểm
 4.1 nhận xét
 - đồ họa game hơi xấu(nếu nhìn kỹ sẽ thấy các ảnh bị đậm nhạt khác nhau do cắt từ các ảnh khác nhau).
-4.2 tự nhận điểm
-- em xin nhận 9.5đ cuối kỳ ạ
+- em xin nhận 9đ cuối kỳ ạ
